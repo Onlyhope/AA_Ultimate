@@ -2,6 +2,10 @@ branch-defaults:
   master:
     environment: test-env
     group_suffix: null
+environment-defaults:
+  test-env:
+    branch: null
+    repository: null
 global:
   application_name: node-express
   branch: null
