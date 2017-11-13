@@ -7,9 +7,9 @@ router.get('/', function(req, res, next) {
   	res.render('pages/index', { title: 'Express' });
 });
 
-router.post('/', function(req, res, next) {
+router.post('/upload-file', function(req, res, next) {
 	if (req.files) {
-		console.log(req.files);
+		res.send(req.files);
 	}
 });
 
