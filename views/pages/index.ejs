@@ -8,6 +8,14 @@
 <body>
 	<h1><%=title%></h1>
 	<p>Welcome to <%=title%> + ejs changes</p>
+	<hr/>
+	<form method="post" enctype="multipart/form-data" action="/upload-file">
+		<div class="form-group">
+   			<label for="exampleInputFile">File input</label>
+    		<input type="file" class="form-control-file" id="inputFileId" name="inputFileName" aria-describedby="fileHelp">
+    		<input type="submit" value="upload">
+  		</div>
+	</form>
 </body>
 
 </html>
