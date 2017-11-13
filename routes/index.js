@@ -3,7 +3,14 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('pages/index', { title: 'Express' });
+	console.log("Loading Homepage...");
+  	res.render('pages/index', { title: 'Express' });
 });
+
+router.post('/', function(req, res, next0 {
+	if (req.files) {
+		console.log(req.files);
+	}
+}));
 
 module.exports = router;
