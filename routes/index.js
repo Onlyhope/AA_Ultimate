@@ -10,6 +10,8 @@ router.get('/', function(req, res, next) {
 router.post('/upload-file', function(req, res, next) {
 	if (req.files) {
 		res.send(req.files);
+	} else {
+		res.send("Nothing happnened");
 	}
 });
 
