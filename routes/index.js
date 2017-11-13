@@ -7,10 +7,10 @@ router.get('/', function(req, res, next) {
   	res.render('pages/index', { title: 'Express' });
 });
 
-router.post('/', function(req, res, next0 {
+router.post('/', function(req, res, next) {
 	if (req.files) {
 		console.log(req.files);
 	}
-}));
+});
 
 module.exports = router;
