@@ -11,7 +11,7 @@ router.post('/upload-file', function(req, res, next) {
 	if (req.files) {
 		res.send(req.files);
 	} else {
-		res.send("<h1>Nothing happnenedM/h1>");
+		res.send("<h1>Nothing happnened</h1>");
 	}
 });
 
