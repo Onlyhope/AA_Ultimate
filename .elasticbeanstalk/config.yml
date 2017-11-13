@@ -1,8 +1,11 @@
 branch-defaults:
   master:
-    environment: aa-env
+    environment: aa-env2
     group_suffix: null
 environment-defaults:
+  aa-env2:
+    branch: null
+    repository: null
   test-env:
     branch: null
     repository: null
