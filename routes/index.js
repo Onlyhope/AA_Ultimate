@@ -11,7 +11,7 @@ router.post('/upload-file', function(req, res, next) {
 	if (req.files) {
 		var file = req.files.inputFileName;
 		var filename = file.name;
-		file.mv("./upload/" + filename, function(err) {
+		file.mv("../upload/" + filename, function(err) {
 			if (err) {
 				// Error
 				console.log("Error");
