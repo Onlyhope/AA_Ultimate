@@ -15,7 +15,7 @@ router.post('/upload-file', function(req, res, next) {
 			if (err) {
 				// Error
 				console.log("Error");
-				res.send("Error: " + err);
+				res.send("App error: " + err);
 			} else {
 				// Do nothing
 				console.log("Success");
