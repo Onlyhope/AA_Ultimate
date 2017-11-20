@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 var router = express.Router();
 
 /* GET home page. */
@@ -12,11 +13,11 @@ router.post('/upload-file', function(req, res, next) {
 		var file = req.files.inputFileName;
 		var filename = file.name
 
-		var loc = window.location.pathname;
-		var dir = loc.substring(0, loc.lastIndexOf('/'));
+		var basename = path.basename;
+		var dir = path.dirname;
 
 		res.send('<p>Dir = ' + dir + '</p>\n'
-			+ '<p>Loc = ' + loc + '</p>');
+			+ '<p>Loc = ' + basename + '</p>');
 
 		// file.mv("../uploads/" + filename, function(err) {
 		// 	if (err) {
