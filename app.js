@@ -47,7 +47,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   // res.render('pages/index', { title: 'Express' });
-  res.render('error');
+  res.render('error', {err_msg: err});
 });
 
 module.exports = app;
