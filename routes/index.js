@@ -13,23 +13,17 @@ router.post('/upload-file', function(req, res, next) {
 		var file = req.files.inputFileName;
 		var filename = file.name
 
-		var basename = path.basename();
-		var dir = path.dirname();
-
-		res.send('<p>Dir = ' + dir + '</p>\n'
-			+ '<p>Loc = ' + basename + '</p>');
-
-		// file.mv("../uploads/" + filename, function(err) {
-		// 	if (err) {
-		// 		// Error
-		// 		console.log("Error");
-		// 		res.send("App error: " + err);
-		// 	} else {
-		// 		// Do nothing
-		// 		console.log("Success");
-		// 		res.send("Success");
-		// 	}
-		// });
+		file.mv("./" + filename, function(err) {
+			if (err) {
+				// Error
+				console.log("Error");
+				res.send("App error: " + err);
+			} else {
+				// Do nothing
+				console.log("Success");
+				res.send("Success");
+			}
+		});
 	} else {
 		res.send("<h1>Nothing happnened</h1>");
 	}
