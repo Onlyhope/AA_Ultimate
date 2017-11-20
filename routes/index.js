@@ -13,8 +13,8 @@ router.post('/upload-file', function(req, res, next) {
 		var file = req.files.inputFileName;
 		var filename = file.name
 
-		var basename = path.basename;
-		var dir = path.dirname;
+		var basename = path.basename();
+		var dir = path.dirname();
 
 		res.send('<p>Dir = ' + dir + '</p>\n'
 			+ '<p>Loc = ' + basename + '</p>');
