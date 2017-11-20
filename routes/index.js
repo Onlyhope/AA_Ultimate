@@ -10,9 +10,8 @@ router.get('/', function(req, res, next) {
 router.post('/upload-file', function(req, res, next) {
 	if (req.files) {
 		var file = req.files.filename;
-		var filename = file.name;
-		res.send("file.name=" + file.name + "\n"
-			+ "req.files.filename=" + req.files.filename);
+		res.send('<h1>req.files.filename</h1>' + '\n'
+			+ '<p>' + req.files '</p>');
 		// file.mv("./upload/" + filename, function(err) {
 		// 	if (err) {
 		// 		// Error
